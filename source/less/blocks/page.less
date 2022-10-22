@@ -1,0 +1,32 @@
+.page {
+  min-height: 100%;
+}
+
+* {
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  box-sizing: border-box;
+}
+
+.page--body {
+  width: 100%;
+  min-height: 100%;
+  background-color: @page-background;
+  font-family: @main-font-family;
+  font-size: @font-size-4;
+  line-height: @line-height;
+  font-weight: @font-weight-light;
+  color: @text-color;
+}
+
+b,strong {
+  font-weight: @font-weight-black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: @title-color;
+  font-weight: @font-weight-bold;
+}

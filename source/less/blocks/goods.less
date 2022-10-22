@@ -1,0 +1,84 @@
+.goods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+  align-items: start;
+  margin: 60px 0;
+
+  @media(max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media(max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.goods--item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 50px 30px 30px;
+  background-color: @card-background;
+
+  @media(max-width: 767px) {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+.goods--title {
+  font-size: @font-size-2;
+  text-align: center;
+}
+
+.goods--img-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.goods--description {
+  margin-top: 30px;
+  font-size: @font-size-4;
+}
+
+.goods--price {
+  margin-top: 30px;
+  font-size: @font-size-3;
+  text-align: center;
+}
+
+.goods--btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.goods--btn {
+  padding: 18px 24px;
+  font-size: @font-size-4;
+  font-weight: @font-weight-black;
+  text-align: center;
+  text-decoration: none;
+  color: @btn-color;
+  background-color: @btn-background;
+  border-radius: 3px;
+  transition: .4s all;
+
+  &:hover, &:focus, &:active {
+    background-color: @btn-active-background;
+  }
+}
+
+.goods--btn_active {
+  background-color: @btn-active-background;
+  pointer-events: none;
+}
